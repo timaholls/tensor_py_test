@@ -5,7 +5,7 @@
 
 Отчет Allure второго сценария:
 
-![image](https://github.com/timaholls/tensor_py_test/assets/118054902/cda97ace-6665-45dc-a224-2d52f0a5a0dc)
+![image](https://github.com/timaholls/tensor_py_test/assets/118054902/c210b4a8-efca-43ed-b859-33b0298a1e3b)
 
 Отчет Allure третьего сценария:
 
