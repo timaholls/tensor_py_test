@@ -1,20 +1,19 @@
 
 Отчет Allure первого сценария:
 
-![image](https://github.com/timaholls/tensor_py_test/assets/118054902/b8b329cc-707a-44e2-8c50-7df4bbe3bb53)
+![image](https://github.com/timaholls/tensor_py_test/assets/118054902/230a97a5-4d77-4661-a69e-fcb7fedd2891)
 
 Отчет Allure второго сценария:
 
-![image](https://github.com/timaholls/tensor_py_test/assets/118054902/8ba513fe-d0ce-458f-86b6-ed91746c1a8e)
+![image](https://github.com/timaholls/tensor_py_test/assets/118054902/cda97ace-6665-45dc-a224-2d52f0a5a0dc)
 
 Отчет Allure третьего сценария:
 
-![image](https://github.com/timaholls/tensor_py_test/assets/118054902/0f2ce316-5586-4bb7-8139-cf6c701568f3)
+![image](https://github.com/timaholls/tensor_py_test/assets/118054902/15aa67e4-25bb-4100-8d0e-27afba851cb7)
 
 Общие параметры:
 
 ![image](https://github.com/timaholls/tensor_py_test/assets/118054902/53fb7cba-440e-4c3f-a5ac-5f75d93b6d5b)
-
 
 Готовая файловая струтура:
 
