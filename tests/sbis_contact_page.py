@@ -28,7 +28,7 @@ class Sbis_contact_page:
         if regoin_field.text.lower() == region:
             return True
         else:
-            return regoin_field
+            return False
 
     def checking_city_before_the_list(self, city):
         """Проверка города перед списком партнеров"""
@@ -41,7 +41,7 @@ class Sbis_contact_page:
         if regoin_field_title == city.lower():
             return True
         else:
-            return regoin_field_title
+            return False
 
     def checking_list_of_partners(self):
         """Поиск списка партнеров"""
