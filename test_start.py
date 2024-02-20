@@ -73,14 +73,16 @@ def test_tensor_search_1(browser, initialized_pages):
         blog_title = script_3.check_vlog_title()
         assert blog_title.text.lower() == 'сила в людях', f"Ошибка: Название блога не совпадает или блог не найден, получено: {blog_title}"
 
-    with allure.step("Шаг 5: Перейти в этом блоке в 'Подробнее' и убедитесь, что открывается 'https://tensor.ru/about'"):
+    with allure.step(
+            "Шаг 5: Перейти в этом блоке в 'Подробнее' и убедитесь, что открывается 'https://tensor.ru/about'"):
         more_details_button = script_3.more_detailed()
         assert more_details_button, "Ошибка: кнопка 'Подробнее' не найдена"
         more_details_button.click()
         WebDriverWait(browser, 10).until(EC.url_contains("https://tensor.ru/about"))
         assert browser.current_url == 'https://tensor.ru/about', f"Ошибка: URL не соответствует ожидаемому, получено {browser.current_url}"
 
-    with allure.step("Шаг 6: Находим раздел 'Работаем' и проверяем, что у всех фотографий хронологии одинаковые height и width"):
+    with allure.step(
+            "Шаг 6: Находим раздел 'Работаем' и проверяем, что у всех фотографий хронологии одинаковые height и width"):
         # Проверяем название блока
         title_vlog = script_4.check_vlog_working_title()
         assert title_vlog == "работаем", f"Ошибка: Название блока не совпадает или блог не найде, получено: {title_vlog}"
@@ -131,7 +133,7 @@ def test_tensor_search_2(browser, initialized_pages):
 
         # проверка текущего региона (Республика Башкортостан)
         region_bash = script_2.checking_the_region('республика башкортостан')
-        assert region_bash, f'Ошибка: Регион не соотвествует текущему, получено {region_bash}'
+        assert region_bash, f'Ошибка: Регион не соотвествует текущему - республика башкортостан'
 
         # проверка город перед списком партнеров (Уфа)
         city_bash = script_2.checking_city_before_the_list('Уфа')
@@ -157,12 +159,16 @@ def test_tensor_search_2(browser, initialized_pages):
         WebDriverWait(browser, 10).until(EC.url_contains("https://sbis.ru/contacts/41-kamchatskij-kraj?tab=clients"))
 
         # проверка текущего региона (Камчатский край) в url
-        correct__url_reg_bash = script_2.checking_url_contact_page()
-        assert correct__url_reg_bash == 'https://sbis.ru/contacts/41-kamchatskij-kraj?tab=clients', f'Ошибка: url не соотвествует текущему региону, получено {correct__url_reg_bash}'
+        correct__url_reg_kam = script_2.checking_url_contact_page()
+        assert correct__url_reg_kam == 'https://sbis.ru/contacts/41-kamchatskij-kraj?tab=clients', f'Ошибка: url не соотвествует текущему региону, получено {correct__url_reg_kam}'
+
+        # проверка текущего региона (Камчатский край)
+        region_kam = script_2.checking_the_region('камчатский край')
+        assert region_kam, f'Ошибка: Регион не соотвествует текущему - Камчатский край'
 
         # проверка город перед списком партнеров (Петропавловск-Камчатский)
-        city_bash = script_2.checking_city_before_the_list('Петропавловск-Камчатский')
-        assert region_bash, f'Ошибка: Город не соотвествует, получено {city_bash}'
+        city_kam = script_2.checking_city_before_the_list('Петропавловск-Камчатский')
+        assert city_kam, f'Ошибка: Город не соотвествует'
 
         # проверка наличия списка партнеров
         partner_bash = script_2.checking_list_of_partners()
@@ -178,7 +184,6 @@ def test_tensor_search_3(browser, initialized_pages):
     script_5 = Sbis_download_page(browser)
 
     with allure.step("Шаг 1: Перейти на https://sbis.ru/"):
-
         # открытие страницы, возвращается url
         url_sbis_main_page = script_1.open_sbis_main_page()
         WebDriverWait(browser, 10).until(EC.url_contains("https://sbis.ru/"))
