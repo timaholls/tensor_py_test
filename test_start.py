@@ -135,7 +135,7 @@ def test_tensor_search_2(browser, initialized_pages):
 
         # проверка город перед списком партнеров (Уфа)
         city_bash = script_2.checking_city_before_the_list('Уфа')
-        assert region_bash, f'Ошибка: Город не соотвествует, получено {city_bash}'
+        assert city_bash, f'Ошибка: Город не соотвествует ожидаемому - Уфа'
 
         # проверка наличия списка партнеров
         partner_bash = script_2.checking_list_of_partners()
